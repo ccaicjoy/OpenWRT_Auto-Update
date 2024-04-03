@@ -47,7 +47,7 @@ env:
 
 jobs:
   wrt_core:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Projects
         uses: actions/checkout@main
@@ -183,7 +183,7 @@ jobs:
         run: |
           cd ./wrt/
 
-          make -j2 V=s
+          make -j$(nproc) || make -j1 V=s
 
       - name: Machine Information
         run: |
