@@ -11,13 +11,12 @@ on:
 #CI权限
 permissions: write-all
 
+#CI任务
 jobs:
-runs-on: ubuntu-20.04
-if: ${{ github.event.repository.owner.id }} == ${{ github.event.sender.id }
   wrt_config:
-  #调用公用编译核心WRT-CORE.yml
+    #调用公用编译核心WRT-CORE.yml
     uses: ./.github/workflows/WRT-CORE.yml
-    with:
+    with:  
       #编译平台，X64包含X86
       WRT_TARGET: X64
       #默认主题  
