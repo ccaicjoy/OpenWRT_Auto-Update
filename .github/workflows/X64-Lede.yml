@@ -32,4 +32,4 @@ jobs:
       #默认源码
       WRT_URL: https://github.com/coolsnowwolf/lede.git
       #默认分支
-      WRT_BRANCH: 20200915
+      WRT_BRANCH: master
